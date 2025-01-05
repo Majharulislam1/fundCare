@@ -5,11 +5,6 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    colors: {
-      primary: '#f75d1b',
-      secondary: '#ecc94b',
-      
-    },
     extend: {
       screens: {
         'sm': '375px',
@@ -23,6 +18,12 @@ export default {
 
         'xl': '1280px',
 
+    },
+    colors: {
+      primary: '#f75d1b',
+      secondary: '#1c0e5e',
+      title:'#3e425c',
+      paragraph:'#555a78'
     },
     },
   },
