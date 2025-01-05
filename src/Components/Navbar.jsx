@@ -29,13 +29,12 @@ const Navbar = () => {
         <div className="sm:-mb-1">
             <div className="bg-[#ffffff] sm:-mb-1">
                 <div className="w-4/5 mx-auto">
-                    <h1 className="text-center py-2 text-[#f75d1b] font-bold">25% off -- Welcome  to BONX   </h1>
+                    <h1 className="text-center py-2 text-primary font-bold">25% off -- Welcome  to BONX   </h1>
                 </div>
             </div>
 
             
-
-
+                <div className="bg-[#3c2659]">
                 <div className="w-4/5 mx-auto">
                     <div className="flex justify-between items-center lg:py-6 md:py-6 sm:py-4">
 
@@ -294,6 +293,9 @@ const Navbar = () => {
 
                     </div>
                 </div>
+                </div>
+
+                
              
             {/* <Tooltip id="my-tooltip" style={{ backgroundColor: "#ffffff", color: "#222" }} /> */}
         </div>
