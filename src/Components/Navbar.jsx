@@ -5,7 +5,8 @@ import  logo from '../assets/logo.png'
 
 
 
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "./Authentication";
  
 
 
@@ -19,6 +20,7 @@ import { useState } from "react";
 
 const Navbar = () => {
 
+    const {handleLogOut} = useContext(AuthContext);
 
 
     const [menu, setMenu] = useState(true);
@@ -29,7 +31,7 @@ const Navbar = () => {
         <div className="sm:-mb-1">
             <div className="bg-[#ffffff] sm:-mb-1">
                 <div className="w-4/5 mx-auto">
-                    <h1 className="text-center py-2 text-primary font-bold">25% off -- Welcome  to BONX   </h1>
+                    <h1 className="text-center py-2 text-primary font-bold">25% off -- Welcome  to BONX {name}   </h1>
                 </div>
             </div>
 
@@ -261,6 +263,11 @@ const Navbar = () => {
                                             <Link to={'/login'}>
                                                 <div className="bg-white border p-2 px-4 rounded-full mr-4 relative">
                                                     <p>Login</p>
+                                                </div>
+                                            </Link>
+                                            <Link onClick={handleLogOut}>
+                                                <div className="bg-white border p-2 px-4 rounded-full mr-4 relative">
+                                                    <p>LogOut</p>
                                                 </div>
                                             </Link>
 

@@ -4,6 +4,9 @@ import {
   } from "react-router-dom";
 import Roots from "./Components/Roots";
 import Home from "./Components/Home";
+import Registration from "./Components/Registration";
+import Login from "./Components/Login";
+import Add_Volunteer_need from "./Components/Add_Volunteer_need";
  
 
   const router = createBrowserRouter([
@@ -14,7 +17,19 @@ import Home from "./Components/Home";
         {
           path: "/",
           element: <Home></Home>,
-        }
+        },
+        {
+          path:'/registration',
+          element:<Registration></Registration>
+      },
+      {
+        path:'/login',
+        element:<Login></Login>
+      },
+      {
+         path:'/add_volunteer_need',
+         element:<Add_Volunteer_need></Add_Volunteer_need>
+      }
       ]
     },
    
