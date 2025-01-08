@@ -7,6 +7,7 @@ import Home from "./Components/Home";
 import Registration from "./Components/Registration";
 import Login from "./Components/Login";
 import Add_Volunteer_need from "./Components/Add_Volunteer_need";
+import All_Volunteer_Need from "./Components/All_Volunteer_Need";
  
 
   const router = createBrowserRouter([
@@ -29,6 +30,10 @@ import Add_Volunteer_need from "./Components/Add_Volunteer_need";
       {
          path:'/add_volunteer_need',
          element:<Add_Volunteer_need></Add_Volunteer_need>
+      },
+      {
+        path:'/all_volunteer',
+        element:<All_Volunteer_Need></All_Volunteer_Need>
       }
       ]
     },
