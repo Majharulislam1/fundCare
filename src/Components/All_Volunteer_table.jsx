@@ -1,9 +1,10 @@
 import moment from "moment";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const All_Volunteer_table = ({post}) => {
 
-    const {category,cover_img,title,Deadline,volunteers_needed} = post;
+    const {category,cover_img,title,Deadline,volunteers_needed,_id} = post;
     const newDate = moment(Deadline).format("MMM Do YY"); 
 
     return (
@@ -29,7 +30,11 @@ const All_Volunteer_table = ({post}) => {
             </td>
             <td className="p-4 border-b border-blue-gray-50">
                 <div className="flex items-center gap-3">
+                    
+                    <Link to={`/volunteer_details/${_id}`}>
                     <button className=" bg-secondary text-white px-3 py-1 rounded-lg">View Details</button>
+                    </Link>
+
                 </div>
             </td>
         </tr>

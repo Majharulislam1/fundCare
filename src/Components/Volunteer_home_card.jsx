@@ -2,19 +2,20 @@
 import { FaArrowRight } from "react-icons/fa";
 import PropTypes from 'prop-types';
 import moment from "moment";
+import { Link } from "react-router-dom";
 
 const Volunteer_home_card = ({ post }) => {
 
-    const { category, cover_img, title, Deadline } = post;
+    const { category, cover_img, title, Deadline,_id } = post;
 
     const newDate = moment(Deadline).format("MMM Do YY");
 
 
 
+ 
 
 
 
-  
 
     return (
         <div>
@@ -24,10 +25,10 @@ const Volunteer_home_card = ({ post }) => {
                     <div className="triangle"></div>
                     <div className="flex flex-col justify-between px-4 py-6 bg-white border border-gray-400 text">
                         <div>
-                            <a href="#"
+                            <a
                                 className="inline-block mb-4 text-xs font-bold capitalize border-b-2 border-primary hover:text-primary">{category}</a>
                             <p>Deadline: {newDate}</p>
-                            <a href="#"
+                            <a
                                 className="block mb-4 text-2xl font-black leading-tight hover:underline hover:text-primary">
                                 {title}
                             </a>
@@ -36,9 +37,11 @@ const Volunteer_home_card = ({ post }) => {
                             </p>
                         </div>
                         <div>
-                            <a href="#"
-                                className="flex items-center pb-1 mt-2 text-base font-black text-primary uppercase border-b border-transparent ">
-                                view details <FaArrowRight className="ml-2" /></a>
+                            <Link to={`/volunteer_details/${_id}`}>
+                                <a
+                                    className="flex items-center pb-1 mt-2 text-base font-black text-primary uppercase border-b border-transparent ">
+                                    view details <FaArrowRight className="ml-2" /></a>
+                            </Link>
                         </div>
                     </div>
                 </div>

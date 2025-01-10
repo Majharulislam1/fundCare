@@ -2,9 +2,10 @@
 import { FaArrowRight } from "react-icons/fa";
 import PropTypes from 'prop-types';
 import moment from "moment";
+import { Link } from "react-router-dom";
 
 const All_Volunteer_card = ({post}) => {
-     const {category,cover_img,title,Deadline,description} = post;
+     const {category,cover_img,title,Deadline,description,_id} = post;
 
      
     
@@ -32,9 +33,9 @@ const All_Volunteer_card = ({post}) => {
                                                 </p>
                                             </div>
                                             <div>
-                                            <a href="#"
+                                            <Link to={`/volunteer_details/${_id}`}
                                                     className="flex items-center pb-1 mt-2 text-base font-black text-primary uppercase border-b border-transparent ">
-                                                    view details <FaArrowRight  className="ml-2"/></a>
+                                                    view details <FaArrowRight  className="ml-2"/></Link>
                                             </div>
                                         </div>
                                     </div>
