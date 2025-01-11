@@ -30,16 +30,7 @@ const Volunteer_Details = () => {
     }, [id])
 
 
-    if(volunteers_needed===0){
-        Swal.fire({
-            position: "center",
-            icon: "error",
-            title: "No Need to Volunteer",
-            showConfirmButton: false,
-            timer: 2000
-        });
-        navigate('/all_volunteer');
-    }
+     
    
         const handleRequest = (e) => {
             e.preventDefault();
@@ -128,9 +119,18 @@ const Volunteer_Details = () => {
                         <p className="py-3">{description}</p>
                         <p className="font-bold">Volunteer Needed: <span className="font-bold text-secondary">{volunteers_needed}</span></p>
                         <p className="font-bold">Deadline: <span className="font-bold text-secondary">{newDate}</span></p>
-                        <button onClick={() => setIsModalOpen(true)} className="bg-secondary text-white px-3 py-2 font-bold my-3 rounded-lg">
+                       
+                       {
+                         volunteers_needed > 0 ? (
+                            <button onClick={() => setIsModalOpen(true)} className="bg-secondary text-white px-3 py-2 font-bold my-3 rounded-lg">
                             Be a Volunteer
                         </button>
+                         ) : (
+                            <p className="text-primary">No more volunteers are needed for this post.</p>
+                         )
+                       }
+
+                       
 
                     </div>
                 </div>
