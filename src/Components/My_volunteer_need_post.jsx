@@ -12,6 +12,8 @@ const My_volunteer_need_post = () => {
 
 
 
+
+
     useEffect(() => {
         fetch(`http://localhost:3000/my_volunteer_need_post/${user?.email}`)
             .then(res => res.json())
@@ -25,7 +27,7 @@ const My_volunteer_need_post = () => {
             });
     }, [user?.email])
 
-    console.log(volunteer);
+   
     if (loading) return <p>Loading...</p>;
 
 

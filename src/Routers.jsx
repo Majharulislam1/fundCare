@@ -12,6 +12,7 @@ import Volunteer_Details from "./Components/Volunteer_Details";
 import Manage_my_post from "./Components/Manage_my_post";
 import My_volunteer_need_post from "./Components/My_volunteer_need_post";
 import My_volunteer_request_post from "./Components/My_volunteer_request_post";
+import Update_my_post from "./Components/Update_my_post";
 
 
 const router = createBrowserRouter([
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
             element: <My_volunteer_request_post></My_volunteer_request_post>
           }
         ]
+      },
+      {
+        path:'/update_my_post/:id',
+        element:<Update_my_post></Update_my_post>
       }
     ]
   },
