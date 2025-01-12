@@ -22,7 +22,7 @@ const Navbar = () => {
 
     const {handleLogOut} = useContext(AuthContext);
 
-
+    const {user} = useContext(AuthContext);
     const [menu, setMenu] = useState(true);
  
 
@@ -36,7 +36,7 @@ const Navbar = () => {
             </div>
 
             
-                <div className="bg-[#3c2659]">
+                <div className="bg-secondary">
                 <div className="w-4/5 mx-auto">
                     <div className="flex justify-between items-center lg:py-6 md:py-6 sm:py-4">
 
@@ -45,7 +45,8 @@ const Navbar = () => {
                                 <img className="w-full" src={logo} alt="" />
                             </Link>
                         </div>
-
+                      
+                        {/* menu section start */}
 
                         <div className={`sm:absolute md:absolute z-50 bg-white border lg:hidden sm:right-[25%]  md:right-[38%] lg:right-1/2 w-[200px] rounded-lg ${menu ? '-top-3/4' : 'top-[6rem]'}  duration-150`}>
                             <p className="text-[#131313b3] flex justify-center items-center my-3 cursor-pointer font-bold text-center">
@@ -65,12 +66,12 @@ const Navbar = () => {
                             <p className="text-[#131313b3] flex justify-center items-center mb-3 cursor-pointer font-bold text-center">
 
                                 <NavLink
-                                    to='/all_review'
+                                    to='/all_volunteer'
                                     className={({ isActive }) =>
                                         isActive ? 'text-[1rem] mr-6 font-semibold text-[#1b206b]' : 'text-[1rem] mr-6 font-semibold text-black'
                                     }
                                 >
-                                    All Review
+                                    All Volunteer Need post
                                 </NavLink>
 
                             </p>
@@ -168,6 +169,7 @@ const Navbar = () => {
                             </p>
                         </div>
 
+  {/* menu section end */}
 
 
 
@@ -183,12 +185,12 @@ const Navbar = () => {
                             </NavLink>
 
                             <NavLink
-                                to='/all_review'
+                                to='/all_volunteer'
                                 className={({ isActive }) =>
                                     isActive ? 'text-[1rem] flex items-center mr-6 font-semibold text-[#1b206b] bg-white px-4 py-1 rounded-lg' : 'text-[1rem] flex items-center mr-6 font-semibold text-white'
                                 }
                             >
-                                All Review
+                                All volunteer Need posts
                             </NavLink>
 
 
@@ -240,7 +242,7 @@ const Navbar = () => {
 
 
 
-                            {/* {
+                            {
                                 user && user?.email ? (
                                     <>
 
@@ -256,7 +258,7 @@ const Navbar = () => {
                                         </Link>
                                     </>
 
-                                ) : */}
+                                ) :
 
                                     (
                                         <>
@@ -265,22 +267,11 @@ const Navbar = () => {
                                                     <p>Login</p>
                                                 </div>
                                             </Link>
-                                            <Link onClick={handleLogOut}>
-                                                <div className="bg-white border p-2 px-4 rounded-full mr-4 relative">
-                                                    <p>LogOut</p>
-                                                </div>
-                                            </Link>
-
-                                            <Link to={'/registration'}>
-                                                <div className="bg-white border p-2 px-4 rounded-full mr-4 relative">
-                                                    <p>Registration</p>
-                                                </div>
-                                            </Link>
                                         </>
 
                                     )
 
-                            {/* } */}
+                           }
 
 
                         </div>

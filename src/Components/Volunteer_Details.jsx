@@ -91,7 +91,7 @@ const Volunteer_Details = () => {
                 })
                 .then( res => res.json())
                 .then(data =>{
-                     console.log(data);
+                      
                 })
         }
 
