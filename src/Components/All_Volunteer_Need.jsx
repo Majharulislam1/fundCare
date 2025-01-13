@@ -117,7 +117,7 @@ const All_Volunteer_Need = () => {
                     table && (
                         <div className="w-4/5 mx-auto mt-6 min-h-screen   bg-white">
 
-                            <div className="p-6 overflow-hidden  px-0">
+                            <div className="p-6 overflow-x-auto  px-0">
                                 <table className="w-full  table-auto text-left">
                                     <thead>
                                         <tr>

@@ -1,18 +1,13 @@
 import { Link, NavLink } from "react-router-dom";
 import { IoMenu } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
-import  logo from '../assets/logo.png'
+import logo from '../assets/logo.png'
 
 
 
 import { useContext, useState } from "react";
 import { AuthContext } from "./Authentication";
- 
-
-
-
-
-
+import { Tooltip } from "react-tooltip";
 
 
 
@@ -20,23 +15,23 @@ import { AuthContext } from "./Authentication";
 
 const Navbar = () => {
 
-    const {handleLogOut} = useContext(AuthContext);
+    const { handleLogOut } = useContext(AuthContext);
 
-    const {user} = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
     const [menu, setMenu] = useState(true);
- 
+
 
 
     return (
         <div className="sm:-mb-1">
             <div className="bg-[#ffffff] sm:-mb-1">
                 <div className="w-4/5 mx-auto">
-                    <h1 className="text-center py-2 text-primary font-bold">25% off -- Welcome  to BONX {name}   </h1>
+                    <h1 className="text-center py-2 text-primary font-bold">majharul2022islam@gmail.com</h1>
                 </div>
             </div>
 
-            
-                <div className="bg-secondary">
+
+            <div className="bg-secondary">
                 <div className="w-4/5 mx-auto">
                     <div className="flex justify-between items-center lg:py-6 md:py-6 sm:py-4">
 
@@ -45,7 +40,7 @@ const Navbar = () => {
                                 <img className="w-full" src={logo} alt="" />
                             </Link>
                         </div>
-                      
+
                         {/* menu section start */}
 
                         <div className={`sm:absolute md:absolute z-50 bg-white border lg:hidden sm:right-[25%]  md:right-[38%] lg:right-1/2 w-[200px] rounded-lg ${menu ? '-top-3/4' : 'top-[6rem]'}  duration-150`}>
@@ -68,7 +63,7 @@ const Navbar = () => {
                                 <NavLink
                                     to='/all_volunteer'
                                     className={({ isActive }) =>
-                                        isActive ? 'text-[1rem] mr-6 font-semibold text-[#1b206b]' : 'text-[1rem] mr-6 font-semibold text-black'
+                                        isActive ? 'text-[1rem] mx-6 font-semibold text-[#1b206b]' : 'text-[1rem] mx-6 font-semibold text-black'
                                     }
                                 >
                                     All Volunteer Need post
@@ -76,52 +71,9 @@ const Navbar = () => {
 
                             </p>
 
-                            {/* {
-                                user?.email && (
-                                    <>
-
-                                        <p className="text-[#131313b3] flex justify-center items-center mb-3 cursor-pointer font-bold text-center">
-
-                                            <NavLink
-                                                to='/add_review'
-                                                className={({ isActive }) =>
-                                                    isActive ? 'text-[1rem] mr-6 font-semibold text-[#1b206b]' : 'text-[1rem] mr-6 font-semibold text-black'
-                                                }
-                                            >
-                                                Add Review
-                                            </NavLink>
-
-                                        </p>
-                                        <p className="text-[#131313b3] flex justify-center items-center mb-3 cursor-pointer font-bold text-center">
-
-                                            <NavLink
-                                                to='/my_review'
-                                                className={({ isActive }) =>
-                                                    isActive ? 'text-[1rem] mr-6 font-semibold text-[#1b206b]' : 'text-[1rem] mr-6 font-semibold text-black'
-                                                }
-                                            >
-                                                My Review
-                                            </NavLink>
-
-                                        </p>
-                                        <p className="text-[#131313b3] flex justify-center items-center mb-3 cursor-pointer font-bold text-center">
-
-                                            <NavLink
-                                                to='/my_Watch_list'
-                                                className={({ isActive }) =>
-                                                    isActive ? 'text-[1rem] mr-6 font-semibold text-[#1b206b]' : 'text-[1rem] mr-6 font-semibold text-black'
-                                                }
-                                            >
-                                                Game WatchList
-                                            </NavLink>
-
-                                        </p>
-                                    </>
-                                )
-                            }
 
 
- */}
+
 
 
 
@@ -129,24 +81,36 @@ const Navbar = () => {
 
 
                             <p>
-                                {/* {
+                                {
                                     user && user?.email ? (
                                         <>
                                             <div className="flex justify-center flex-col-reverse items-center">
+
+
+
                                                 <button onClick={handleLogOut} className="bg-white border mb-4 p-2 px-4 rounded-full mr-4 relative">
 
                                                     Log Out
 
                                                 </button>
-                                                <Link to={'/myProfile'}>
-                                                    <div className="bg-white border w-[60px] mb-3 h-[60px] p-1 rounded-full mr-4">
+                                                <Link data-tooltip-id="my-tooltip" data-tooltip-content={user && user?.displayName}>
+                                                    <div className="bg-white border w-[60px] h-[60px] p-1 rounded-full mr-4">
                                                         <img className="object-cover h-full w-full rounded-full" src={user?.photoURL} alt="" />
                                                     </div>
                                                 </Link>
+
+                                                <div className="dropdown dropdown-bottom py-1">
+                                                    <div tabIndex={0} role="button" className="bg-white text-secondary px-4 rounded-lg mx-4 py-1">My Profile</div>
+                                                    <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                                                        <li><Link to={'/add_volunteer_need'}>Add Volunteer need Post</Link></li>
+                                                        <li><Link to={'/manage_my_post'}>Manage My Posts</Link></li>
+                                                    </ul>
+                                                </div>
+
                                             </div>
                                         </>
 
-                                    ) : */}
+                                    ) :
 
                                         (
                                             <>
@@ -155,21 +119,15 @@ const Navbar = () => {
                                                         <p>Login</p>
                                                     </button>
                                                 </Link>
-
-                                                <Link to={'/registration'} className="flex mb-3 justify-center">
-                                                    <button className="bg-white border p-2 px-4 rounded-full mr-4 relative">
-                                                        <p>Registration</p>
-                                                    </button>
-                                                </Link>
                                             </>
 
                                         )
 
-                                {/* } */}
+                                }
                             </p>
                         </div>
 
-  {/* menu section end */}
+                        {/* menu section end */}
 
 
 
@@ -194,44 +152,7 @@ const Navbar = () => {
                             </NavLink>
 
 
-                            {/* {
-                                user?.email && (
-                                    <>
-                                        <NavLink
-                                            to='/add_review'
-                                            className={({ isActive }) =>
-                                                isActive
-                                                    ? 'text-[1rem] flex items-center mr-6 font-semibold text-[#1b206b] bg-white px-4 py-1 rounded-lg'
-                                                    : 'text-[1rem] flex items-center mr-6 font-semibold text-white'
-                                            }
-                                        >
-                                            Add Review
-                                        </NavLink>
 
-                                        <NavLink
-                                            to="/my_review"
-                                            className={({ isActive }) =>
-                                                isActive
-                                                    ? 'text-[1rem] flex items-center mr-6 font-semibold text-[#1b206b] bg-white px-4 py-1 rounded-lg'
-                                                    : 'text-[1rem] flex items-center mr-6 font-semibold text-white'
-                                            }
-                                        >
-                                            My Review
-                                        </NavLink>
-
-                                        <NavLink
-                                            to="/my_Watch_list"
-                                            className={({ isActive }) =>
-                                                isActive
-                                                    ? 'text-[1rem] flex items-center mr-6 font-semibold text-[#1b206b] bg-white px-4 py-1 rounded-lg'
-                                                    : 'text-[1rem] flex items-center mr-6 font-semibold text-white'
-                                            }
-                                        >
-                                            Game WatchList
-                                        </NavLink>
-                                    </>
-                                )
-                            } */}
 
 
 
@@ -245,17 +166,42 @@ const Navbar = () => {
                             {
                                 user && user?.email ? (
                                     <>
+                                        <div className="dropdown dropdown-bottom py-1">
+                                            <div tabIndex={0} role="button" className="bg-white text-secondary px-4 rounded-lg mx-4 py-1">My Profile</div>
+                                            <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                                                <li><Link to={'/add_volunteer_need'}>Add Volunteer need Post</Link></li>
+                                                <li><Link to={'/manage_my_post'}>Manage My Posts</Link></li>
+                                            </ul>
+                                        </div>
 
-                                        <button onClick={handleLogOut} className="bg-white border p-2 px-4 rounded-full mr-4 relative">
 
-                                            Log Out
 
-                                        </button>
-                                        <Link data-tooltip-id="my-tooltip" data-tooltip-content={user && user?.displayName}>
-                                            <div className="bg-white border w-[60px] h-[60px] p-1 rounded-full mr-4">
-                                                <img className="object-cover h-full w-full rounded-full" src={user?.photoURL} alt="" />
+
+                                        <div className="dropdown dropdown-hover">
+                                            <div tabIndex={0} role="button" className=" m-1">
+                                                <Link data-tooltip-id="my-tooltip" data-tooltip-content={user && user?.displayName}>
+                                                    <div className="bg-white border w-[60px] h-[60px] p-1 rounded-full mr-4">
+                                                        <img className="object-cover h-full w-full rounded-full" src={user?.photoURL} alt="" />
+                                                    </div>
+                                                </Link>
                                             </div>
-                                        </Link>
+                                            <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                                                <li><a> <button onClick={handleLogOut}>
+
+                                                    Log Out
+
+                                                </button></a></li>
+
+                                            </ul>
+                                        </div>
+
+
+
+
+
+
+
+
                                     </>
 
                                 ) :
@@ -271,7 +217,7 @@ const Navbar = () => {
 
                                     )
 
-                           }
+                            }
 
 
                         </div>
@@ -291,11 +237,11 @@ const Navbar = () => {
 
                     </div>
                 </div>
-                </div>
+            </div>
 
-                
-             
-            {/* <Tooltip id="my-tooltip" style={{ backgroundColor: "#ffffff", color: "#222" }} /> */}
+
+
+            <Tooltip id="my-tooltip" style={{ backgroundColor: "#ffffff", color: "#222" }} />
         </div>
     );
 };
