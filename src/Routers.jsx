@@ -13,12 +13,15 @@ import Manage_my_post from "./Components/Manage_my_post";
 import My_volunteer_need_post from "./Components/My_volunteer_need_post";
 import My_volunteer_request_post from "./Components/My_volunteer_request_post";
 import Update_my_post from "./Components/Update_my_post";
+import PrivateRoute from "./Components/PrivateRoute";
+import ErrorPage from "./Components/ErrorPage";
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Roots></Roots>,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -34,7 +37,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/add_volunteer_need',
-        element: <Add_Volunteer_need></Add_Volunteer_need>
+        element: <PrivateRoute><Add_Volunteer_need></Add_Volunteer_need></PrivateRoute>  
       },
       {
         path: '/all_volunteer',
@@ -42,29 +45,29 @@ const router = createBrowserRouter([
       },
       {
         path: '/volunteer_details/:id',
-        element: <Volunteer_Details></Volunteer_Details>
+        element:<PrivateRoute><Volunteer_Details></Volunteer_Details></PrivateRoute> 
       },
       {
         path: '/manage_my_post',
-        element: <Manage_my_post></Manage_my_post>,
+        element:<PrivateRoute>  <Manage_my_post></Manage_my_post></PrivateRoute>,
         children: [
           {
             path: "",
-            element: <My_volunteer_need_post></My_volunteer_need_post>
+            element: <PrivateRoute> <My_volunteer_need_post></My_volunteer_need_post> </PrivateRoute> 
           },
           {
             path: 'my_volunteer_need_post',
-            element: <My_volunteer_need_post></My_volunteer_need_post>
+            element: <PrivateRoute> <My_volunteer_need_post></My_volunteer_need_post> </PrivateRoute> 
           },
           {
             path: 'my_volunteer_request_post',
-            element: <My_volunteer_request_post></My_volunteer_request_post>
+            element: <PrivateRoute> <My_volunteer_request_post></My_volunteer_request_post> </PrivateRoute>
           }
         ]
       },
       {
         path:'/update_my_post/:id',
-        element:<Update_my_post></Update_my_post>
+        element: <PrivateRoute><Update_my_post></Update_my_post></PrivateRoute> 
       }
     ]
   },
