@@ -1,8 +1,50 @@
-# React + Vite
+# FundCare
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Build a Volunteer Management Website, a user-friendly platform for managing and participating in volunteer activities. The goal of this project is to enable users to create, update, and delete volunteer need posts, as well as volunteer for others' posts. Key features include user authentication, secure data handling, and CRUD operations with toast notifications. The application should have a fully responsive and visually appealing design, focusing on seamless navigation and an engaging user experience.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+1. Responsive Design
+2. User-Friendly 
+3. Authentication system
+4. Routing System
+5. Dynamic Routing system
+6. Add Volunteer need post 
+7. Update Volunteer need post
+8. Delete Volunteer need post
+9. Request Volunteer
+
+
+### Frontend Technology:
+1. HTML, CSS
+2. JavaScript
+3. Tailwind CSS
+4. React.js
+5. React Router DOM
+6. Firebase Authentication
+
+### Backend Technology:
+1. Node.js
+2. Express.js
+3. MongoDB
+4. Vercel
+5. Cors
+
+### NPM Packages Used
+
+1. React icons
+2. React-rating
+3. React-awesome-reveal
+4. Sweet alert2
+5. React Rating Stars
+6. React Toastify
+7. slick carousel
+8. React-tooltip
+
+ 
+     
+     
+ 
+
+
+[Live link](https://fundcare-6c7d0.web.app/)
