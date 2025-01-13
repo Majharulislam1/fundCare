@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from "./Authentication";
 
 import Swal from 'sweetalert2'
+import { Helmet } from "react-helmet";
 
 
 
@@ -101,11 +102,18 @@ const Volunteer_Details = () => {
     
 
 
-    if (loading) return <p>Loading...</p>;
+        if (loading) return (
+            <div className="flex justify-center py-8">
+                      <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-[#1b206b]"></div>
+                </div>
+        )
 
 
     return (
         <div>
+             <Helmet>
+                <title>Volunteer Details</title>
+            </Helmet>
             <div className="lg:w-4/5 md:w-4/5 sm:w-full mx-auto my-5">
                 <div className="lg:w-1/2 md:w-2/3 sm:w-4/5 mx-auto">
                     <div className="flex justify-center">

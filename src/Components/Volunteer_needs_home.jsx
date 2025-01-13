@@ -24,7 +24,11 @@ const Volunteer_needs_home = () => {
   }, [])
 
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return (
+    <div className="flex justify-center py-8">
+              <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-[#1b206b]"></div>
+        </div>
+)
 
   return (
     <div>

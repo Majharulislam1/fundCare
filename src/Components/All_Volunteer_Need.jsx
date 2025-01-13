@@ -4,6 +4,7 @@ import { BsGrid3X3GapFill } from "react-icons/bs";
 import { TfiMenuAlt } from "react-icons/tfi";
 import All_Volunteer_card from "./All_Volunteer_card";
 import All_Volunteer_table from "./All_Volunteer_table";
+import { Helmet } from "react-helmet";
 const All_Volunteer_Need = () => {
 
     const [loading, setLoading] = useState(true);
@@ -56,13 +57,20 @@ const All_Volunteer_Need = () => {
 
 
 
-    if (loading) return <p>Loading...</p>;
+    if (loading) return (
+        <div className="flex justify-center py-8">
+                  <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-[#1b206b]"></div>
+            </div>
+    )
 
 
 
 
     return (
         <div>
+            <Helmet>
+                <title>All Volunteer Need Post</title>
+            </Helmet>
             <div className="w-11/12 mx-auto">
                 <div className="flex items-center">
                     <div className="relative w-full my-4 max-w-xl mx-auto bg-white rounded-full">

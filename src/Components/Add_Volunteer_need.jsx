@@ -4,6 +4,7 @@ import Swal from 'sweetalert2'
 import { useNavigate } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import 'react-datepicker/dist/react-datepicker.css';
+import { Helmet } from "react-helmet";
 
 
 const Add_Volunteer_need = () => {
@@ -56,6 +57,11 @@ const Add_Volunteer_need = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>
+                    Add Volunteer 
+                </title>
+            </Helmet>
             <div>
                 <div className="relative w-full lg:h-60 md:h-36 sm:h-36 bg-[#1b206b]  flex items-center justify-center">
                     <h1 className="text-white text-3xl font-bold">Add Volunteer need post</h1>

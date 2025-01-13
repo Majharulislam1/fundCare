@@ -4,6 +4,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import { AuthContext } from './Authentication';
 import Swal from 'sweetalert2'
+import { Helmet } from 'react-helmet';
 
 const Update_my_post = () => {
      const { user } = useContext(AuthContext);
@@ -76,11 +77,18 @@ const Update_my_post = () => {
 
         
        
-        if (loading) return <p>Loading...</p>;
+        if (loading) return (
+            <div className="flex justify-center py-8">
+                      <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-[#1b206b]"></div>
+                </div>
+        )
         const   { cover_img, title,  description, category, volunteers_needed,location } = volunteer;
 
     return (
          <div>
+             <Helmet>
+                <title>Update My Post</title>
+            </Helmet>
                     <div>
                         <div className="relative w-full lg:h-60 md:h-36 sm:h-36 bg-[#1b206b]  flex items-center justify-center">
                             <h1 className="text-white text-3xl font-bold">Update Volunteer need post</h1>

@@ -6,6 +6,7 @@ import { FaEye } from "react-icons/fa6";
 import { FaEyeSlash } from "react-icons/fa";
 import 'react-toastify/dist/ReactToastify.css';
 import Swal from 'sweetalert2'
+import { Helmet } from "react-helmet";
  
 
 
@@ -45,7 +46,7 @@ const Login = () => {
               });
             navigate(location?.state ? location.state : "/");
 
-
+            
 
           }).catch((error) => {
              
@@ -81,7 +82,7 @@ const Login = () => {
                 showConfirmButton: false,
                 timer: 2000
               });
-            navigate('/');
+            navigate(location?.state ? location.state : "/");
             
           })
           .catch((error) => {
@@ -99,6 +100,9 @@ const Login = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Login</title>
+            </Helmet>
             <div>
                 <div>
 

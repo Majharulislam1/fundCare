@@ -1,9 +1,13 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Link, NavLink, Outlet } from 'react-router-dom';
 
 const Manage_my_post = () => {
     return (
         <div>
+            <Helmet>
+                <title>Manage My Post</title>
+            </Helmet>
             <div className='text-center flex justify-center items-center sm:flex-col lg:flex-row md:flex-row my-4'>
 
                 <NavLink

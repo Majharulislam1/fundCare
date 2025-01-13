@@ -8,6 +8,7 @@ import { FaEye } from "react-icons/fa6";
 import { FaEyeSlash } from "react-icons/fa";
 import 'react-toastify/dist/ReactToastify.css';
 import Swal from 'sweetalert2'
+import { Helmet } from "react-helmet";
 
  
  
@@ -110,6 +111,9 @@ const Registration = () => {
 
     return (
         <div>
+             <Helmet>
+                <title>Registration</title>
+            </Helmet>
             <div>
                 <div className="min-h-screen flex items-center  justify-center w-full dark:bg-gray-950">
                     <div  data-aos="flip-right" className="bg-white dark:bg-gray-900 shadow-md rounded-lg px-8 py-6 max-w-md">
