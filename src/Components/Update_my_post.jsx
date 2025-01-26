@@ -31,7 +31,7 @@ const Update_my_post = () => {
       
         const value = { cover_img, title, name, email, description, category, volunteers_needed, Deadline,location }
 
-        fetch(`http://localhost:3000/update_need_post/${id}`, {
+        fetch(`https://fund-care-backend.vercel.app/update_need_post/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -63,7 +63,7 @@ const Update_my_post = () => {
 
 
         useEffect(() => {
-            fetch(`http://localhost:3000/volunteer_details/${id}`)
+            fetch(`https://fund-care-backend.vercel.app/volunteer_details/${id}`)
                 .then(res => res.json())
                 .then((data) => {
                     setVolunteer(data)

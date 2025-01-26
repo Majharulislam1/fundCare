@@ -11,7 +11,7 @@ const Volunteer_needs_home = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:3000/volunteer_needs')
+    fetch('https://fund-care-backend.vercel.app/volunteer_needs')
       .then(res => res.json())
       .then((data) => {
         setVolunteer(data)
@@ -41,7 +41,7 @@ const Volunteer_needs_home = () => {
 
         <div className="py-6 grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6">
           {
-            volunteer.map(data => <Volunteer_home_card post={data} key={data._id}></Volunteer_home_card>)
+            volunteer?.map(data => <Volunteer_home_card post={data} key={data._id}></Volunteer_home_card>)
           }
         </div>
 

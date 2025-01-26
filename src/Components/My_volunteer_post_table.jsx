@@ -24,7 +24,7 @@ const My_volunteer_post_table = ({ post }) => {
             if (result.isConfirmed) {
 
 
-        fetch(`http://localhost:3000/delete_volunteer_post/${_id}`, {
+        fetch(`https://fund-care-backend.vercel.app/delete_volunteer_post/${_id}`, {
             method: 'DELETE'
         })
         .then(res => res.json())

@@ -23,7 +23,7 @@ const My_volunteer_request_card = ({post}) => {
                 if (result.isConfirmed) {
     
     
-            fetch(`http://localhost:3000/delete_request/${_id}`, {
+            fetch(`https://fund-care-backend.vercel.app/delete_request/${_id}`, {
                 method: 'DELETE'
             })
             .then(res => res.json())

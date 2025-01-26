@@ -18,7 +18,7 @@ const Volunteer_Details = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const newDate = moment(Deadline).format("MMM Do YY");
     useEffect(() => {
-        fetch(`http://localhost:3000/volunteer_details/${id}`)
+        fetch(`https://fund-care-backend.vercel.app/volunteer_details/${id}`)
             .then(res => res.json())
             .then((data) => {
                 setVolunteer(data)
@@ -57,7 +57,7 @@ const Volunteer_Details = () => {
             
     
            
-                fetch("http://localhost:3000/volunteer_request", {
+                fetch("https://fund-care-backend.vercel.app/volunteer_request", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -84,7 +84,7 @@ const Volunteer_Details = () => {
         
                      
         
-                fetch(`http://localhost:3000/volunteer_decrement/${_id}`,{
+                fetch(`https://fund-care-backend.vercel.app/volunteer_decrement/${_id}`,{
                     method: "PATCH",
                     headers: {
                         "Content-Type": "application/json", 
@@ -151,8 +151,8 @@ const Volunteer_Details = () => {
                     onClose={() => setIsModalOpen(false)}
                 >
                     <div className="modal-box w-11/12 max-w-5xl">
-                        <h3 className="font-bold text-lg">Hello!</h3>
-                        <p className="py-4">Click the button below to close</p>
+                        <h3 className="font-bold text-lg">Volunteer Request</h3>
+                        
 
 
 
