@@ -19,7 +19,7 @@ const Hero = () => {
         autoplaySpeed: 3000
       };
     return (
-        <div>
+        <div className="lg:mt-[90px] md:mt-[90px] sm:mt-[67px]">
             <div>
       <div className='h-[100%] overflow-hidden -z-10'>
         <Slider {...settings}>

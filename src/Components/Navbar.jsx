@@ -18,17 +18,13 @@ const Navbar = () => {
     const { handleLogOut } = useContext(AuthContext);
 
     const { user } = useContext(AuthContext);
-    const [menu, setMenu] = useState(true);
+    const [menu, setMenu] = useState(false);
 
 
 
     return (
-        <div className="sm:-mb-1">
-            <div className="bg-[#ffffff] sm:-mb-1">
-                <div className="w-4/5 mx-auto">
-                    <h1 className="text-center py-2 text-primary font-bold">majharul2022islam@gmail.com</h1>
-                </div>
-            </div>
+        <div className="sm:-mb-1 fixed top-0 z-10 w-full">
+            
 
 
             <div className="bg-secondary">
@@ -43,7 +39,7 @@ const Navbar = () => {
 
                         {/* menu section start */}
 
-                        <div className={`sm:absolute md:absolute z-50 bg-white border lg:hidden sm:right-[25%]  md:right-[38%] lg:right-1/2 w-[200px] rounded-lg ${menu ? '-top-3/4' : 'top-[6rem]'}  duration-150`}>
+                        <div className={`sm:absolute md:absolute z-50 bg-white border lg:hidden sm:right-[25%]  md:right-[38%] lg:right-1/2 w-[200px] rounded-lg ${menu ? '-top-[12rem]' : 'top-[5rem]'}  duration-150`}>
                             <p className="text-[#131313b3] flex justify-center items-center my-3 cursor-pointer font-bold text-center">
 
                                 <NavLink
@@ -93,7 +89,7 @@ const Navbar = () => {
                                                     Log Out
 
                                                 </button>
-                                                <Link data-tooltip-id="my-tooltip" data-tooltip-content={user && user?.displayName}>
+                                                <Link data-tooltip-id="my-tooltip"     data-tooltip-content={user && user?.displayName}>
                                                     <div className="bg-white border w-[60px] h-[60px] p-1 rounded-full mr-4">
                                                         <img className="object-cover h-full w-full rounded-full" src={user?.photoURL} alt="" />
                                                     </div>
@@ -179,7 +175,7 @@ const Navbar = () => {
 
                                         <div className="dropdown dropdown-hover">
                                             <div tabIndex={0} role="button" className=" m-1">
-                                                <Link data-tooltip-id="my-tooltip" data-tooltip-content={user && user?.displayName}>
+                                                <Link data-tooltip-id="my-tooltip" data-tooltip-place='right' data-tooltip-content={user && user?.displayName}>
                                                     <div className="bg-white border w-[60px] h-[60px] p-1 rounded-full mr-4">
                                                         <img className="object-cover h-full w-full rounded-full" src={user?.photoURL} alt="" />
                                                     </div>
