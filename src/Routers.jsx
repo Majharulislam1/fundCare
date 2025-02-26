@@ -15,6 +15,7 @@ import My_volunteer_request_post from "./Components/My_volunteer_request_post";
 import Update_my_post from "./Components/Update_my_post";
 import PrivateRoute from "./Components/PrivateRoute";
 import ErrorPage from "./Components/ErrorPage";
+import About from "./Components/About";
 
 
 const router = createBrowserRouter([
@@ -34,6 +35,14 @@ const router = createBrowserRouter([
       {
         path: '/login',
         element: <Login></Login>
+      },
+      {
+         path:'/about',
+         element:<About></About>
+      },
+      {
+        path:'/contact',
+        element:<p>contact</p>
       },
       {
         path: '/add_volunteer_need',
