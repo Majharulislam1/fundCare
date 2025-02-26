@@ -85,7 +85,7 @@ const Update_my_post = () => {
         const   { cover_img, title,  description, category, volunteers_needed,location } = volunteer;
 
     return (
-         <div>
+         <div className="lg:mt-[90px] md:mt-[90px] sm:mt-[67px]">
              <Helmet>
                 <title>Update My Post</title>
             </Helmet>

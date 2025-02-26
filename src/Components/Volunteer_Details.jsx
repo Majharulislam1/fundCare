@@ -110,7 +110,7 @@ const Volunteer_Details = () => {
 
 
     return (
-        <div>
+        <div className="lg:mt-[90px] md:mt-[90px] sm:mt-[67px]">
              <Helmet>
                 <title>Volunteer Details</title>
             </Helmet>

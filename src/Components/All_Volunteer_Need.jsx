@@ -67,7 +67,7 @@ const All_Volunteer_Need = () => {
 
 
     return (
-        <div>
+        <div  className="lg:mt-[120px] md:mt-[120px] sm:mt-[67px]">
             <Helmet>
                 <title>All Volunteer Need Post</title>
             </Helmet>

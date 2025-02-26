@@ -4,7 +4,7 @@ import { Link, NavLink, Outlet } from 'react-router-dom';
 
 const Manage_my_post = () => {
     return (
-        <div>
+        <div className="lg:mt-[90px] md:mt-[90px] sm:mt-[67px]">
             <Helmet>
                 <title>Manage My Post</title>
             </Helmet>
