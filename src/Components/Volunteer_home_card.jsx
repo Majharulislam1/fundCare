@@ -18,8 +18,8 @@ const Volunteer_home_card = ({ post }) => {
 
 
     return (
-        <div>
-            <div className="w-full max-w-full mb-8   flex flex-col ">
+        <div className="h-full flex flex-col">
+            <div className="w-full max-w-full mb-8 h-full  relative justify-between flex flex-col  overflow-hidden  ">
                 <img src={cover_img} alt="Card img" className="object-cover object-center w-full h-48" />
                 <div className="flex flex-grow">
                     <div className="triangle"></div>

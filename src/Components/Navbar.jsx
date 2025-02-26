@@ -18,13 +18,13 @@ const Navbar = () => {
     const { handleLogOut } = useContext(AuthContext);
 
     const { user } = useContext(AuthContext);
-    const [menu, setMenu] = useState(false);
+    const [menu, setMenu] = useState(true);
 
 
 
     return (
         <div className="sm:-mb-1 fixed top-0 z-10 w-full">
-            
+
 
 
             <div className="bg-secondary">
@@ -39,7 +39,7 @@ const Navbar = () => {
 
                         {/* menu section start */}
 
-                        <div className={`sm:absolute md:absolute z-50 bg-white border lg:hidden sm:right-[25%]  md:right-[38%] lg:right-1/2 w-[200px] rounded-lg ${menu ? '-top-[12rem]' : 'top-[5rem]'}  duration-150`}>
+                        <div className={`sm:absolute md:absolute z-50 bg-white border lg:hidden sm:right-[25%]  md:right-[38%] lg:right-1/2 w-[200px] rounded-lg ${menu ? '-top-[30rem]' : 'top-[5rem]'}  duration-150`}>
                             <p className="text-[#131313b3] flex justify-center items-center my-3 cursor-pointer font-bold text-center">
 
                                 <NavLink
@@ -67,6 +67,33 @@ const Navbar = () => {
 
                             </p>
 
+                            <p className="text-[#131313b3] flex justify-center items-center my-3 cursor-pointer font-bold text-center">
+
+                                <NavLink
+                                    to="/about"
+                                    className={({ isActive }) =>
+                                        isActive ? 'text-[1rem] mr-6 font-semibold text-[#1b206b]' : 'text-[1rem] mr-6 font-semibold text-black'
+                                    }
+                                >
+                                    About Us
+                                </NavLink>
+
+
+                            </p>
+                            <p className="text-[#131313b3] flex justify-center items-center my-3 cursor-pointer font-bold text-center">
+
+                                <NavLink
+                                    to="/contact"
+                                    className={({ isActive }) =>
+                                        isActive ? 'text-[1rem] mr-6 font-semibold text-[#1b206b]' : 'text-[1rem] mr-6 font-semibold text-black'
+                                    }
+                                >
+                                    Contact Us
+                                </NavLink>
+
+
+                            </p>
+
 
 
 
@@ -89,7 +116,7 @@ const Navbar = () => {
                                                     Log Out
 
                                                 </button>
-                                                <Link data-tooltip-id="my-tooltip"     data-tooltip-content={user && user?.displayName}>
+                                                <Link data-tooltip-id="my-tooltip" data-tooltip-content={user && user?.displayName}>
                                                     <div className="bg-white border w-[60px] h-[60px] p-1 rounded-full mr-4">
                                                         <img className="object-cover h-full w-full rounded-full" src={user?.photoURL} alt="" />
                                                     </div>
@@ -147,7 +174,23 @@ const Navbar = () => {
                                 All volunteer Need posts
                             </NavLink>
 
+                            <NavLink
+                                to="/about"
+                                className={({ isActive }) =>
+                                    isActive ? 'text-[1rem] flex items-center mr-6 font-semibold text-[#1b206b] bg-white px-4 py-1 rounded-lg' : 'text-[1rem] flex items-center mr-6 font-semibold text-white'
+                                }
+                            >
+                                About Us
+                            </NavLink>
 
+                            <NavLink
+                                to="/contact"
+                                className={({ isActive }) =>
+                                    isActive ? 'text-[1rem] flex items-center mr-6 font-semibold text-[#1b206b] bg-white px-4 py-1 rounded-lg' : 'text-[1rem] flex items-center mr-6 font-semibold text-white'
+                                }
+                            >
+                                Contact us
+                            </NavLink>
 
 
 

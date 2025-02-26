@@ -16,6 +16,7 @@ import Update_my_post from "./Components/Update_my_post";
 import PrivateRoute from "./Components/PrivateRoute";
 import ErrorPage from "./Components/ErrorPage";
 import About from "./Components/About";
+import Contact_us from "./Components/Contact_us";
 
 
 const router = createBrowserRouter([
@@ -42,7 +43,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/contact',
-        element:<p>contact</p>
+        element:<Contact_us></Contact_us>
       },
       {
         path: '/add_volunteer_need',
