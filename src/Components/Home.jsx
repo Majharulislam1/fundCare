@@ -7,6 +7,7 @@ import Sponsored_section from "./Sponsored_section";
 import Team from "./Team";
 import Faq_section from "./Faq_section";
 import Our_Mission_home from "./Our_Mission_home";
+import CharitySection from "./CharitySection";
 
 
 const Home = () => {
@@ -21,6 +22,9 @@ const Home = () => {
              <Our_Mission_home></Our_Mission_home>
 
             <Sponsored_section></Sponsored_section>
+
+            <CharitySection></CharitySection>
+
             <Blogs></Blogs>
             <Home_volunteer></Home_volunteer>
             <Team></Team>
