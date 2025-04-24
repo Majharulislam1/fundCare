@@ -14,7 +14,7 @@ const Funded_Charity = () => {
 
 
 
-            <div className='grid grid-cols-4 gap-4'>
+            <div className='grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4'>
                 <div>
                     <div>
 
@@ -44,14 +44,14 @@ const Funded_Charity = () => {
                 <div>
                     <div>
 
-                    
-                    <FaHeartbeat className='text-5xl text-primary' />
 
-                         
+                        <FaHeartbeat className='text-5xl text-primary' />
+
+
                     </div>
                     <div>
                         <h4 className='text-secondary font-bold py-6 text-lg'>Medical <br />
-                        Facilities for People</h4>
+                            Facilities for People</h4>
                         <p className='text-paragraph'>663 million people drink dirty water. Learn how access to clean water can improve health, boost local economies.</p>
                     </div>
 
@@ -59,13 +59,13 @@ const Funded_Charity = () => {
                 <div>
                     <div>
 
-                      
-                        
-<FaBook className='text-5xl text-primary' />
+
+
+                        <FaBook className='text-5xl text-primary' />
                     </div>
                     <div>
                         <h4 className='text-secondary font-bold py-6 text-lg'>Pure Education <br />
-                        For Every Children</h4>
+                            For Every Children</h4>
                         <p className='text-paragraph'>663 million people drink dirty water. Learn how access to clean water can improve health, boost local economies.</p>
                     </div>
 
