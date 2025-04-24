@@ -1,13 +1,15 @@
 
 import React from 'react';
 import { FaHeart } from "react-icons/fa";
+import charity_1 from '../assets/charity_1.jpg';
+import charity_2 from '../assets/charity_2.jpg';
 
 const CharitySection = () => {
     return (
         <div>
 
             <div className='w-4/5 mx-auto py-10'>
-                <div className='grid grid-cols-2 gap-6'>
+                <div className='grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-6'>
                     <div>
                         <div>
                             <h1 className='text-4xl font-bold py-10 text-secondary'>Welcome to CharityPress <br /> please rise your hand</h1>
@@ -38,6 +40,15 @@ const CharitySection = () => {
 
                     </div>
                     <div>
+                          <div className='grid grid-cols-2 w-4/5 mx-auto'>
+                                <div>
+                                     <img src={charity_1} className='rounded-lg' alt="" />
+                                </div>
+                                <div>
+                                     <img src={charity_2} className='rounded-lg' alt="" />
+                                </div>
+                          </div>
+
 
                     </div>
                 </div>
