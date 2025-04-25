@@ -17,6 +17,7 @@ import PrivateRoute from "./Components/PrivateRoute";
 import ErrorPage from "./Components/ErrorPage";
 import About from "./Components/About";
 import Contact_us from "./Components/Contact_us";
+import Events from "./Components/Events";
 
 
 const router = createBrowserRouter([
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+          path:'/events',
+          element:<Events></Events>
       },
       {
         path: '/registration',
