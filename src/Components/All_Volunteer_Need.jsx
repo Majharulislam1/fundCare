@@ -31,12 +31,12 @@ const All_Volunteer_Need = () => {
         fetch(`https://fund-care-backend.vercel.app/Search_volunteer?title=${searchTerm}`)
             .then((res) => res.json())
             .then((data) => {
-                
+
                 setVolunteer(data);
                 setLoading(false);
             })
             .catch(() => {
-                
+
                 setLoading(false);
             });
     };
@@ -58,16 +58,16 @@ const All_Volunteer_Need = () => {
 
 
     if (loading) return (
-        <div className="flex justify-center py-8">
-                  <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-[#1b206b]"></div>
-            </div>
+        <div className="flex justify-center h-screen items-center py-8">
+            <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-[#1b206b]"></div>
+        </div>
     )
 
 
 
 
     return (
-        <div  className="lg:mt-[120px] md:mt-[120px] sm:mt-[67px]">
+        <div className="lg:mt-[120px] md:mt-[120px] sm:mt-[67px]">
             <Helmet>
                 <title>All Volunteer Need Post</title>
             </Helmet>

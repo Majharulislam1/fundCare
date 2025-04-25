@@ -57,7 +57,7 @@ const Our_Mission_home = () => {
                 <div>
                     <div className=" flex items-center justify-center p-4 sm:p-6 lg:p-8">
                         <div className="w-full max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl">
-                            {/* Top Wide Image */}
+                         
                             <div className="mb-4 sm:mb-6">
                                 <img
                                     src={achieve_image_1}
@@ -65,7 +65,7 @@ const Our_Mission_home = () => {
                                     className="w-full h-auto rounded-lg shadow-lg object-cover sm:h-48 md:h-64 lg:h-80"
                                 />
                             </div>
-                            {/* Bottom Two Images */}
+                           
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                                 <img
                                     src={achieve_image_2}

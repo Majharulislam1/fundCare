@@ -4,7 +4,7 @@ const Faq_section = () => {
     return (
         <div className='sm:w-4/5 md:w-2/4 lg:w-2/4 mx-auto py-10'>
             <div className="text-center">
-                <h1 className="lg:text-5xl md:text-4xl sm:text-3xl font-bold text-title mb-4">FAQ</h1>
+                <h1 className="lg:text-5xl md:text-4xl sm:text-3xl font-bold text-secondary mb-4">FAQ</h1>
                 <p className="lg:w-1/2 md:w-3/4 sm:w-full mx-auto text-paragraph">Got questions? We’ve got answers! Find everything you need to know about Fundcare below. If you still have questions </p>
             </div>
 
